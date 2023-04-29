@@ -5,9 +5,9 @@ const
   k = 10000;
   n = 125;
   troubleshoot = FALSE;
-  fact = 0.5;
-  dau_min = 700;
-  dau_max = 1150;
+  fact = 1;
+  dau_min = 890;
+  dau_max = 1410;
   adult_min = 1900;
   adult_max = 2550;
 
