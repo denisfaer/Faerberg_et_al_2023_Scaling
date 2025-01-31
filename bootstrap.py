@@ -16,10 +16,7 @@ def bootrstrap(data):                   # generates a randomized dataset
     for n in range(N):
         temp_data = []
         for i in range(S):
-            if perm_stages:
-                temp_data.append(data[random.randint(0, N - 1)][random.randint(0, S - 1)])
-            else:
-                temp_data.append(data[random.randint(0, N - 1)][i])
+            temp_data.append(data[random.randint(0, N - 1)][i])
         
         simul.append(temp_data)
     
@@ -64,25 +61,13 @@ def cvdiff(data):                       # generates the difference between absol
 def significance(simuls):               # returns the minimal significance level based of sig
     delt = simuls.transpose()
     delt = np.sort(delt)
-    sig_i1 = int(bootstraps * sig1)
-    if more_sig:
-        sig_i2 = int(bootstraps * sig2)
-        sig_i3 = int(bootstraps * sig3)
+    sig_i = int(bootstraps * sig)
     
-    sigs_1 = []
-    if more_sig:
-        sigs_2 = []
-        sigs_3 = []
+    sigs = []
     for s in range(S):
-        sigs_1.append([delt[s][len(delt[s]) - sig_i1 - 1]])
-        if more_sig:
-            sigs_2.append([delt[s][len(delt[s]) - sig_i2 - 1]])
-            sigs_3.append([delt[s][len(delt[s]) - sig_i3 - 1]])
+        sigs.append([delt[s][len(delt) - sig_i]])
     
-    if not more_sig:
-        return sigs_1
-    else:
-        return sigs_1, sigs_2, sigs_3
+    return sigs
 
 
 def pval(emp, simuls):                  # returns empirical p-values for CVabs-CVfrac differences
@@ -102,15 +87,11 @@ def pval(emp, simuls):                  # returns empirical p-values for CVabs-C
 
 """ configs """
 
-source_file = 'thaliana_growth'         # file name used to take the raw data from (up to '.csv')
+source_file = 'file_name_here'          # file name used to take the raw data from (up to '.csv')
 bootstraps = 10_000                     # number of bootstraps to run
-more_sig = False                        # plot further significance points
-sig1 = 0.05                             # significance threshold 1
-sig2 = 0.01                             # significance threshold 2 
-sig3 = 0.001                            # significance threshold 3 
+sig = 0.05                              # significance threshold 
 save_boots = False                      # save all bootsraps in Excel
 save_sigs = False                       # save empirical significances in Excel
-perm_stages = False                     # bootsrtap individuals AND stages
 
 """ start """
 
@@ -144,10 +125,8 @@ for i in range(bootstraps):
 
 deltas_array = np.array(deltas)
 
-if more_sig:
-    t1, t2, t3 = significance(deltas_array)
-else:
-    t1 = significance(deltas_array)
+
+t1 = significance(deltas_array)
 
 results_directory = os.path.join(directory, 'Results')
 if not os.path.exists(results_directory):
@@ -155,10 +134,6 @@ if not os.path.exists(results_directory):
 
 sns.barplot(plot_emp, color=('Grey'))
 plt.boxplot(t1, positions = range(len(plot_emp)))
-
-if more_sig:
-    plt.boxplot(t2, positions = range(len(plot_emp)))
-    plt.boxplot(t3, positions = range(len(plot_emp)))
     
 plt.xlabel('Process step/stage')
 plt.ylabel('CVabs - CVfrac')
