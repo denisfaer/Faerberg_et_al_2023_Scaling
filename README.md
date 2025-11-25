@@ -1,4 +1,4 @@
-### Code repository for Faerberg, Gurarie & Ruvinsky 2026 *Dev Biol*
+### Code repository for Faerberg, Gurarie & Ruvinsky *Dev Biol* 2026
 
 Folders labeled **appendix2** and **figure5** provide codes to recapitulate analysis in the relevant figures.
 
