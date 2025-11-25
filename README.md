@@ -6,7 +6,7 @@ The Python script ``bootsrap.py`` is as an easy way to run the CV analysis and g
 
 The sample CSV sheet ``C_elegans_embryos.csv`` is provided as a test dataset and is a courtesy of Dr. Bao (Santella et al., 2010 *BMC Bioinform*; Moore et al., 2013 *Cell*; Du et al., 2014 *Cell*).
 
-### How to run the BOOTSRAP.PY script:
+### How to run the ``bootsrap.py`` script:
 
 1. Format your data into a basic CSV file where rows represent individuals and columns represent timepoints. This file shouldn't contains labels or anything else besides raw data. See the ``C_elegans_embryos.csv`` file for reference.
 2. Download the ``bootsrap.py`` code and place it in the same folder as your formatted CSV file.
