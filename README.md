@@ -12,3 +12,10 @@ The Python script ``bootsrap.py`` is as an easy way to perform the CV analysis a
 2. Download the ``bootsrap.py`` code and place it in the same folder as your formatt
 3. Change the name of the file in line 90 of ``bootsrap.py`` replacing *file_name_here* with your CSV file name within the name of your file: make sure to keep the single quotation marks and NOT include the .csv extention.
 4. Run the ``bootsrap.py`` code. It should generate the otput CSV files in the same directory as well as a new "Results" folder with the relevant bar plots.
+
+If any issues arise try making a new environment and install the following versions of Python and libraries:
+``Python 3.10.4``
+``numpy 1.21.5``
+``scipy 1.7.3``
+``matplotlib 3.5.3``
+``seaborn 0.12.2``
