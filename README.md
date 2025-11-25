@@ -2,9 +2,9 @@
 
 Folders labeled **appendix2** and **figure5** provide codes to recapitulate analysis in the relevant figures.
 
-The Python script ``bootsrap.py`` is as an easy way to run the CV analysis and get an empirical p-value.
+The sample CSV sheet ``C_elegans_embryos.csv`` is a sample dataset for ``bootsrap.py`` and is a courtesy of Dr. Bao (Santella et al., 2010 *BMC Bioinform*; Moore et al., 2013 *Cell*; Du et al., 2014 *Cell*).
 
-The sample CSV sheet ``C_elegans_embryos.csv`` is provided as a test dataset and is a courtesy of Dr. Bao (Santella et al., 2010 *BMC Bioinform*; Moore et al., 2013 *Cell*; Du et al., 2014 *Cell*).
+The Python script ``bootsrap.py`` is as an easy way to perform the CV analysis and get an empirical p-value.
 
 ### How to run the ``bootsrap.py`` script:
 
