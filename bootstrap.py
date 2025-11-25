@@ -156,8 +156,6 @@ if save_boots:
 
 # save empirical significances results to a csv file
 s = pval(empirical, deltas_array)
-print(s)
-
 if save_sigs:  
     with open(os.path.join(results_directory, source_file + '_significance.csv'), 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
