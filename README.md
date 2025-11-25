@@ -1,2 +1,2 @@
-## Code repository for Faerberg et al. 2026 (*Dev Biol*)
+## Code repository for Faerberg, Gurarie & Ruvinsky 2026 (*Dev Biol*)
 
