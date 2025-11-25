@@ -125,7 +125,6 @@ for i in range(bootstraps):
 
 deltas_array = np.array(deltas)
 
-
 t1 = significance(deltas_array)
 
 results_directory = os.path.join(directory, 'Results')
