@@ -14,6 +14,7 @@ The Python script ``bootsrap.py`` is as an easy way to perform the CV analysis a
 4. Run the ``bootsrap.py`` code. It should generate the otput CSV files in the same directory as well as a new "Results" folder with the relevant bar plots.
 
 If any issues arise try making a new environment and install the following versions of Python and libraries:
+
 ``Python 3.10.4``
 ``numpy 1.21.5``
 ``scipy 1.7.3``
