@@ -10,7 +10,7 @@ import random
 
 """ functions """
 
-def bootrstrap(data):                   # generates a randomized dataset
+def bootrstrap(data): # generates a bootstrapped dataset
     simul = []
     
     for n in range(N):
@@ -23,7 +23,7 @@ def bootrstrap(data):                   # generates a randomized dataset
     return np.array(simul)
 
 
-def normalize(data):                    # returns fractional data
+def normalize(data): # returns fractional data
     norm_array = []
     dataset = data.transpose()
     
@@ -41,7 +41,7 @@ def normalize(data):                    # returns fractional data
     return out.transpose()
 
 
-def cvdiff(data):                       # generates the difference between absolute and fractional CoV
+def cvdiff(data): # generates the difference between absolute and fractional CoV
     absolute = [] 
     for i in range(S):
        absolute.append(sts.tstd(data[i]) / sts.tmean(data[i]))
@@ -58,7 +58,7 @@ def cvdiff(data):                       # generates the difference between absol
     return delta
 
 
-def significance(simuls):               # returns the minimal significance level based of sig
+def significance(simuls): # returns the minimal significance level based of sig
     delt = simuls.transpose()
     delt = np.sort(delt)
     sig_i = int(bootstraps * sig)
@@ -70,7 +70,7 @@ def significance(simuls):               # returns the minimal significance level
     return sigs
 
 
-def pval(emp, simuls):                  # returns empirical p-values for CVabs-CVfrac differences
+def pval(emp, simuls): # returns empirical p-values for CVabs-CVfrac differences
     pvals = []
     
     for i in range(S):
@@ -162,4 +162,5 @@ print(s)
 if save_sigs:  
     with open(os.path.join(results_directory, source_file + '_significance.csv'), 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
+
         writer.writerows(s)
