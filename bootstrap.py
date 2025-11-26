@@ -91,7 +91,7 @@ source_file = 'file_name_here'          # file name used to take the raw data fr
 bootstraps = 10_000                     # number of bootstraps to run
 sig = 0.05                              # significance threshold 
 save_boots = False                      # save all bootsraps in Excel
-save_sigs = False                       # save empirical significances in Excel
+save_sigs = True                        # save empirical significances in Excel
 
 """ start """
 
@@ -161,3 +161,4 @@ if save_sigs:
         writer = csv.writer(csvfile)
 
         writer.writerows(s)
+
