@@ -18,5 +18,6 @@ The Python script ``bootsrap.py`` is as an easy way to perform the CV analysis a
 ``scipy 1.7.3``
 ``matplotlib 3.5.3``
 ``seaborn 0.12.2``
+
 5. Run the ``bootsrap.py`` code in the new environment. It should generate the otput CSV files in the same directory as well as a new "Results" folder with the relevant bar plots.
 
