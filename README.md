@@ -12,7 +12,6 @@ The Python script ``bootsrap.py`` is as an easy way to perform the CV analysis a
 2. Download the ``bootsrap.py`` script and place it in the same folder as your formatted CSV file.
 3. Change the string in line 90 of ``bootsrap.py`` replacing *file_name_here* with the name of the formatted CSV file containing your data: make sure to keep the single quotation marks and DO NOT include the .csv extention.
 4. Create a new environment with  the following versions of Python and libraries:
-
 ``Python 3.10.4``
 ``numpy 1.21.5``
 ``scipy 1.7.3``
